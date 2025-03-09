@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import { Metadata } from 'next';
 import "./globals.css";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
+import { Inter } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
 
 export const metadata: Metadata = {
     title: "PLANIFI - MAAK CORP",
@@ -75,20 +77,51 @@ export const metadata: Metadata = {
     alternates: {
         canonical: 'https://planifi.tn'
     },
-    viewport: {
-        width: 'device-width',
-        initialScale: 1,
-        maximumScale: 5,
-    }
 };
 
-export default function RootLayout({
+// Separate the viewport export as required by Next.js
+export const viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+};
+
+// Define supported locales for static generation
+export function generateStaticParams() {
+    return [{ locale: 'en' }, { locale: 'fr' }, { locale: 'ar' }];
+}
+
+// Load translations
+async function getMessages(locale: string) {
+    try {
+        return (await import(`../../public/locales/${locale}/common.json`)).default;
+    } catch {
+        console.error(`Failed to load messages for locale: ${locale}`);
+        // Fallback to English if the requested locale isn't available
+        return (await import(`../../public/locales/en/common.json`)).default;
+    }
+}
+
+const inter = Inter({ subsets: ['latin'] });
+
+export default async function RootLayout({
     children,
+    params,
 }: Readonly<{
     children: React.ReactNode;
+    params: { locale: string };
 }>) {
+    // Ensure locale is valid or fallback to default
+    const locale = params?.locale || 'en';
+    console.log('Current locale:', locale);
+
+    const messages = await getMessages(locale);
+
+    // Set HTML direction based on locale
+    const dir = locale === 'ar' ? 'rtl' : 'ltr';
+
     return (
-        <html lang="en">
+        <html lang={locale} dir={dir}>
             <head>
                 <script
                     type="application/ld+json"
@@ -123,9 +156,11 @@ export default function RootLayout({
                     }}
                 />
             </head>
-            <body className="antialiased text-black">
+            <body className={inter.className}>
                 <Nav />
-                {children}
+                <NextIntlClientProvider locale={locale} messages={messages}>
+                    {children}
+                </NextIntlClientProvider>
                 <Footer />
             </body>
         </html>

@@ -4,9 +4,16 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
+import LanguageSelector from './LanguageSelector';
+import { useParams, } from 'next/navigation';
 
 function Nav() {
+    const { t } = useTranslation('common');
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const params = useParams();
+    const locale = params.locale || 'en';
+    const isRTL = locale === 'ar';
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
@@ -18,29 +25,29 @@ function Nav() {
 
     const routes: TNavItems[] = [
         {
-            name: 'Features',
+            name: t('nav.features'),
             link: '/',
             command: () => scrollToSection('features')
         },
         {
-            name: 'Pricing',
+            name: t('nav.pricing'),
             link: '/pricing',
             command: () => scrollToSection('pricing')
         },
         {
-            name: 'FAQ',
+            name: t('nav.faq'),
             link: '/faq',
             command: () => scrollToSection('faq')
         }
     ];
 
     return (
-        <nav className='sticky top-0 bg-black w-full p-4 z-50 shadow-md'>
+        <nav className='sticky top-0 bg-black w-full p-4 z-50 shadow-md' dir={isRTL ? 'rtl' : 'ltr'}>
             <div className="container mx-auto flex items-center justify-between">
                 <Link href="/" className='flex items-center gap-2'>
-                    <Image src="./logo-planifi.svg" alt="logo" width={30} height={30} />
+                    <Image src="/logo-planifi.svg" alt="logo" width={30} height={30} />
                     <div className="flex flex-col">
-                        <span className='uppercase font-semibold text-white'>Planifi</span>
+                        <span className='uppercase font-semibold text-white'>Planify</span>
                         <span className="text-xs text-gray-400">Tender Management Platform</span>
                     </div>
                 </Link>
@@ -59,17 +66,21 @@ function Nav() {
                         ))}
                     </div>
                     <Link href="/request" className="bg-white text-black px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors">
-                        Try Free
+                        {t('nav.tryFree')}
                     </Link>
+                    <LanguageSelector />
                 </div>
 
                 {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-white"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                    {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                <div className="md:hidden flex items-center gap-4">
+                    <LanguageSelector />
+                    <button
+                        className="text-white"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
@@ -85,7 +96,7 @@ function Nav() {
                         </button>
                     ))}
                     <Link href="/request" className="bg-white text-black px-6 py-3 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors text-center mt-2">
-                        Try Free
+                        {t('nav.tryFree')}
                     </Link>
                 </div>
             )}

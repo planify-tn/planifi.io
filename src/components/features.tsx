@@ -1,54 +1,35 @@
+
+'use client';
 import { Building2, FileText, Wrench, Calendar, Globe, ShieldCheck, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import { useTranslation } from 'next-i18next'
+import { useParams } from 'next/navigation'
 
 function Features() {
-    const features = [
-        {
-            title: "User Management",
-            description: "Secure authentication with role-based access control for seamless team collaboration on tenders.",
-            icon: <ShieldCheck className="w-6 h-6 text-white" />,
-            benefit: "Keep your sensitive tender documents secure while enabling team collaboration."
-        },
-        {
-            title: "Project Management",
-            description: "Customize your projects with unique views: Kanban, Gantt, and List views.",
-            icon: <Calendar className="w-6 h-6 text-white" />,
-            benefit: "Never miss a tender deadline with visual progress tracking."
-        },
-        {
-            title: "Document Repository",
-            description: "Intelligent document management with version control and template library.",
-            icon: <FileText className="w-6 h-6 text-white" />,
-            benefit: "Find the right documents instantly and maintain perfect version history."
-        },
-        {
-            title: "Organization Management",
-            description: "Manage your team's resumes, skills, and company structure for faster tender responses.",
-            icon: <Building2 className="w-6 h-6 text-white" />,
-            benefit: "Reduce response time by 40% with ready-to-use company information."
-        },
-        {
-            title: "Tender Management",
-            description: "Discover, track, and respond to tender opportunities all in one place.",
-            icon: <Globe className="w-6 h-6 text-white" />,
-            benefit: "Never miss a relevant tender opportunity with smart alerts."
-        },
-        {
-            title: "Built-in Tools",
-            description: "Essential tools including resume builder, currency converter, and compliance checkers.",
-            icon: <Wrench className="w-6 h-6 text-white" />,
-            benefit: "Save time with specialized tools designed for tender success."
-        }
-    ]
+    const { t } = useTranslation('common');
+    const params = useParams();
+    const locale = params.locale || 'en';
+    const isRTL = locale === 'ar';
+
+    const features = t('features.items', { returnObjects: true });
+
+    const icons = [
+        <ShieldCheck key="shield" className="w-6 h-6 text-white" />,
+        <Calendar key="calendar" className="w-6 h-6 text-white" />,
+        <FileText key="filetext" className="w-6 h-6 text-white" />,
+        <Building2 key="building" className="w-6 h-6 text-white" />,
+        <Globe key="globe" className="w-6 h-6 text-white" />,
+        <Wrench key="wrench" className="w-6 h-6 text-white" />
+    ];
 
     return (
-        <section id='features' className='py-24 bg-gray-50'>
+        <section id='features' className='py-24 bg-gray-50' dir={isRTL ? 'rtl' : 'ltr'}>
             <div className='container mx-auto px-4 lg:px-0 space-y-12'>
                 <div className='text-center'>
-                    <h2 className="text-4xl font-bold mb-4">Comprehensive Tender Management</h2>
+                    <h2 className="text-4xl font-bold mb-4">{t('features.title')}</h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        PLANIFI combines all the tools you need to win more tenders in one powerful, easy-to-use platform.
+                        {t('features.description')}
                     </p>
                 </div>
 
@@ -57,7 +38,7 @@ function Features() {
                         <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
                             <div className="flex gap-4 items-start mb-4">
                                 <div className="bg-black rounded-full p-3 flex-shrink-0">
-                                    {feature.icon}
+                                    {icons[index]}
                                 </div>
                                 <h3 className="text-xl font-bold">{feature.title}</h3>
                             </div>
@@ -70,14 +51,15 @@ function Features() {
                 </div>
 
                 <div className='flex justify-center'>
-                    <Link href='/request' className="group bg-black text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-gray-900 transition-all w-full lg:w-fit">
-                        Join Waitlist
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <Link href='/request' className={`group bg-black text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-gray-900 transition-all w-full lg:w-fit`}>
+                        {t('features.cta')}
+                        <ArrowRight className={`w-5 h-5 ${isRTL ? 'group-hover:-translate-x-1 rotate-180' : 'group-hover:translate-x-1'} transition-transform`} />
                     </Link>
                 </div>
             </div>
         </section>
     )
 }
+
 
 export default Features

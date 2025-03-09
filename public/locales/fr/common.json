@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "title": "Planify | Plateforme complète de gestion des appels d'offres",
+    "description": "Optimisez votre processus d'appel d'offres avec Planify - La plateforme tout-en-un pour découvrir, suivre et remporter des appels d'offres en Libye et en Afrique du Nord."
+  },
+  "nav": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarification",
+    "faq": "FAQ",
+    "tryFree": "Essai Gratuit"
+  },
+  "hero": {
+    "comingSoon": "Bientôt disponible - Inscrivez-vous",
+    "title": "Gagnez plus d'appels d'offres,",
+    "titleHighlight": "Avec moins d'effort",
+    "description": "PLANIFI simplifie l'ensemble de votre processus d'appel d'offres, de la découverte à la soumission, grâce à notre plateforme tout-en-un conçue pour les entreprises sérieuses.",
+    "cta": "Rejoindre la liste d'attente"
+  },
+  "features": {
+    "title": "Gestion complète des appels d'offres",
+    "description": "PLANIFI combine tous les outils dont vous avez besoin pour gagner plus d'appels d'offres dans une plateforme puissante et facile à utiliser.",
+    "cta": "Rejoindre la liste d'attente",
+    "items": [
+      {
+        "title": "Gestion des utilisateurs",
+        "description": "Authentification sécurisée avec contrôle d'accès basé sur les rôles pour une collaboration d'équipe fluide sur les appels d'offres.",
+        "benefit": "Gardez vos documents d'appel d'offres sensibles en sécurité tout en permettant la collaboration d'équipe."
+      },
+      {
+        "title": "Gestion de projet",
+        "description": "Personnalisez vos projets avec des vues uniques : Kanban, Gantt et vues en liste.",
+        "benefit": "Ne manquez jamais une date limite d'appel d'offres grâce au suivi visuel des progrès."
+      },
+      {
+        "title": "Dépôt de documents",
+        "description": "Gestion intelligente des documents avec contrôle de version et bibliothèque de modèles.",
+        "benefit": "Trouvez instantanément les bons documents et maintenez un historique parfait des versions."
+      },
+      {
+        "title": "Gestion de l'organisation",
+        "description": "Gérez les CV, les compétences et la structure de votre équipe pour des réponses plus rapides aux appels d'offres.",
+        "benefit": "Réduisez le temps de réponse de 40% avec des informations d'entreprise prêtes à l'emploi."
+      },
+      {
+        "title": "Gestion des appels d'offres",
+        "description": "Découvrez, suivez et répondez aux opportunités d'appels d'offres en un seul endroit.",
+        "benefit": "Ne manquez jamais une opportunité d'appel d'offres pertinente grâce aux alertes intelligentes."
+      },
+      {
+        "title": "Outils intégrés",
+        "description": "Outils essentiels comprenant un générateur de CV, un convertisseur de devises et des vérificateurs de conformité.",
+        "benefit": "Gagnez du temps avec des outils spécialisés conçus pour le succès des appels d'offres."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Choisissez votre forfait",
+    "description": "Options de tarification flexibles pour répondre aux besoins de toute organisation",
+    "billingPeriods": {
+      "monthly": "Mensuel",
+      "quarterly": "Trimestriel",
+      "quarterlySavings": "Économisez jusqu'à 10%"
+    },
+    "plans": [
+      {
+        "name": "Forfait Pro",
+        "description": "Parfait pour les petites et moyennes entreprises",
+        "monthly": {
+          "price": "199 $",
+          "period": "par utilisateur/mois"
+        },
+        "quarterly": {
+          "price": "179 $",
+          "period": "par utilisateur/mois, facturé trimestriellement"
+        },
+        "features": [
+          "Module RH (jusqu'à 20 employés)",
+          "Dépôt de documents (5 Go de stockage)",
+          "Gestion de projet (Basique)",
+          "Gestion des appels d'offres (Limitée)",
+          "Support basique (Email)",
+          "Modèles standard"
+        ],
+        "cta": "Précommander Pro"
+      },
+      {
+        "name": "Forfait Plus",
+        "description": "Pour les entreprises sérieuses sur la croissance",
+        "monthly": {
+          "price": "130 $",
+          "period": "par utilisateur/mois"
+        },
+        "quarterly": {
+          "price": "117 $",
+          "period": "par utilisateur/mois, facturé trimestriellement"
+        },
+        "badge": "RECOMMANDÉ",
+        "features": [
+          "Tout ce qui est inclus dans Pro, plus :",
+          "Module RH (Employés illimités)",
+          "Dépôt de documents (20 Go de stockage)",
+          "Gestion de projet (Avancée)",
+          "Gestion des appels d'offres (Fonctionnalités complètes)",
+          "Support prioritaire (Téléphone et email)",
+          "Extension navigateur Tender Grabber",
+          "Tableau de bord d'analyse avancé",
+          "Modèles personnalisés"
+        ],
+        "cta": "Précommander Plus"
+      },
+      {
+        "name": "Entreprise",
+        "description": "Solution personnalisée pour les grandes organisations",
+        "monthly": {
+          "price": "Personnalisé",
+          "period": "adapté à vos besoins"
+        },
+        "quarterly": {
+          "price": "Personnalisé",
+          "period": "adapté à vos besoins"
+        },
+        "features": [
+          "Tout ce qui est inclus dans Plus, plus :",
+          "Option auto-hébergée disponible",
+          "Personnalisation de la marque",
+          "Gestionnaire de compte dédié",
+          "Développement de fonctionnalités personnalisées",
+          "Intégration personnalisée",
+          "Support premium 24/7",
+          "Intégrations personnalisées",
+          "Garanties de SLA"
+        ],
+        "cta": "Contacter les ventes"
+      }
+    ],
+    "helpChoosingText": "Besoin d'aide pour choisir le bon forfait ?",
+    "contactSales": "Contactez notre équipe commerciale"
+  },
+  "faq": {
+    "title": "Foire Aux Questions",
+    "description": "Trouvez des réponses aux questions courantes sur les fonctionnalités, les prix et les détails techniques de Planify",
+    "searchPlaceholder": "Rechercher des questions...",
+    "categories": [
+      { "id": "all", "name": "Toutes les questions" },
+      { "id": "features", "name": "Fonctionnalités et utilisation" },
+      { "id": "pricing", "name": "Prix et forfaits" },
+      { "id": "technical", "name": "Technique et hébergement" },
+      { "id": "team", "name": "Équipe et accès" }
+    ],
+    "noQuestionsFound": "Aucune question trouvée correspondant à vos critères.",
+    "resetFilters": "Réinitialiser les filtres",
+    "stillHaveQuestions": "Vous avez encore des questions ?",
+    "supportText": "Notre équipe est là pour vous aider à tirer le meilleur parti de Planify",
+    "contactSupport": "Contacter le support"
+  },
+  "footer": {
+    "cta": {
+      "title": "Prêt à transformer votre processus d'appel d'offres ?",
+      "description": "Rejoignez la liste d'attente dès aujourd'hui et obtenez des tarifs exclusifs de lancement",
+      "button": "Commencer maintenant"
+    },
+    "copyright": "© {{year}} MAAK CORP, Tous droits réservés."
+  },
+  "language": {
+    "selector": "Langue",
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية"
+  }
+}

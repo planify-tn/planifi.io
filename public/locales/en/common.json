@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "title": "Planify | Complete Tender Management Platform",
+    "description": "Streamline your tender process with Planify - The all-in-one platform for discovering, tracking, and winning tenders in Libya and North Africa."
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "tryFree": "Try Free"
+  },
+  "hero": {
+    "comingSoon": "Coming Soon - Join Waitlist",
+    "title": "Win More Tenders,",
+    "titleHighlight": "With Less Effort",
+    "description": "PLANIFI streamlines your entire tender process from discovery to submission with our all-in-one platform built for serious businesses.",
+    "cta": "Join Waitlist"
+  },
+  "features": {
+    "title": "Comprehensive Tender Management",
+    "description": "PLANIFI combines all the tools you need to win more tenders in one powerful, easy-to-use platform.",
+    "cta": "Join Waitlist",
+    "items": [
+      {
+        "title": "User Management",
+        "description": "Secure authentication with role-based access control for seamless team collaboration on tenders.",
+        "benefit": "Keep your sensitive tender documents secure while enabling team collaboration."
+      },
+      {
+        "title": "Project Management",
+        "description": "Customize your projects with unique views: Kanban, Gantt, and List views.",
+        "benefit": "Never miss a tender deadline with visual progress tracking."
+      },
+      {
+        "title": "Document Repository",
+        "description": "Intelligent document management with version control and template library.",
+        "benefit": "Find the right documents instantly and maintain perfect version history."
+      },
+      {
+        "title": "Organization Management",
+        "description": "Manage your team's resumes, skills, and company structure for faster tender responses.",
+        "benefit": "Reduce response time by 40% with ready-to-use company information."
+      },
+      {
+        "title": "Tender Management",
+        "description": "Discover, track, and respond to tender opportunities all in one place.",
+        "benefit": "Never miss a relevant tender opportunity with smart alerts."
+      },
+      {
+        "title": "Built-in Tools",
+        "description": "Essential tools including resume builder, currency converter, and compliance checkers.",
+        "benefit": "Save time with specialized tools designed for tender success."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "description": "Flexible pricing options to meet the needs of any organization",
+    "billingPeriods": {
+      "monthly": "Monthly",
+      "quarterly": "Quarterly",
+      "quarterlySavings": "Save up to 10%"
+    },
+    "plans": [
+      {
+        "name": "Pro Plan",
+        "description": "Perfect for small to medium businesses",
+        "monthly": {
+          "price": "$199",
+          "period": "per user/month"
+        },
+        "quarterly": {
+          "price": "$179",
+          "period": "per user/month, billed quarterly"
+        },
+        "features": [
+          "HR Module (up to 20 employees)",
+          "Document Repository (5GB storage)",
+          "Project Management (Basic)",
+          "Tender Management (Limited)",
+          "Basic Support (Email)",
+          "Standard Templates"
+        ],
+        "cta": "Pre-order Pro"
+      },
+      {
+        "name": "Plus Plan",
+        "description": "For businesses serious about scaling",
+        "monthly": {
+          "price": "$130",
+          "period": "per user/month"
+        },
+        "quarterly": {
+          "price": "$117",
+          "period": "per user/month, billed quarterly"
+        },
+        "badge": "RECOMMENDED",
+        "features": [
+          "Everything in Pro, plus:",
+          "HR Module (Unlimited employees)",
+          "Document Repository (20GB storage)",
+          "Project Management (Advanced)",
+          "Tender Management (Full featured)",
+          "Priority Support (Phone & Email)",
+          "Tender Grabber Browser Extension",
+          "Advanced Analytics Dashboard",
+          "Custom Templates"
+        ],
+        "cta": "Pre-order Plus"
+      },
+      {
+        "name": "Enterprise",
+        "description": "Custom solution for large organizations",
+        "monthly": {
+          "price": "Custom",
+          "period": "tailored to your needs"
+        },
+        "quarterly": {
+          "price": "Custom",
+          "period": "tailored to your needs"
+        },
+        "features": [
+          "Everything in Plus, plus:",
+          "Self-hosted option available",
+          "White-labeling",
+          "Dedicated account manager",
+          "Custom feature development",
+          "Personalized onboarding",
+          "24/7 Premium support",
+          "Custom integrations",
+          "SLA guarantees"
+        ],
+        "cta": "Contact Sales"
+      }
+    ],
+    "helpChoosingText": "Need help choosing the right plan?",
+    "contactSales": "Contact our sales team"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about Planify's features, pricing, and technical details",
+    "searchPlaceholder": "Search for questions...",
+    "categories": [
+      { "id": "all", "name": "All Questions" },
+      { "id": "features", "name": "Features & Usage" },
+      { "id": "pricing", "name": "Pricing & Plans" },
+      { "id": "technical", "name": "Technical & Hosting" },
+      { "id": "team", "name": "Team & Access" }
+    ],
+    "noQuestionsFound": "No questions found matching your criteria.",
+    "resetFilters": "Reset filters",
+    "stillHaveQuestions": "Still have questions?",
+    "supportText": "Our team is here to help you get the most out of Planify",
+    "contactSupport": "Contact Support"
+  },
+  "footer": {
+    "cta": {
+      "title": "Ready to Transform Your Tender Process?",
+      "description": "Join the waitlist today and get exclusive early-bird pricing",
+      "button": "Get Started Now"
+    },
+    "copyright": "© {{year}} MAAK CORP, All rights reserved."
+  },
+  "language": {
+    "selector": "Language",
+    "en": "English",
+    "fr": "Français",
+    "ar": "العربية"
+  }
+}
